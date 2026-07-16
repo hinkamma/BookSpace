@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Book, BookCard } from '../services/book';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-books',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterLink],
   templateUrl: './books.html',
   styleUrl: './books.css',
 })

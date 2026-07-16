@@ -1,0 +1,151 @@
+<div class="collecte-wrapper">
+
+  <div class="back-navigation">
+    <button routerLink="/" class="btn-back" type="button">
+      <i class="bi bi-arrow-left"></i>
+      <span>Retour</span>
+    </button>
+  </div>
+
+  <header class="collecte-header">
+    <div class="header-main">
+      <div class="header-text">
+        <h1 class="collecte-title">Ma Collecte Privée</h1>
+        <p class="collecte-subtitle">Gérez vos livres importés, notes personnelles et documents de lecture privés.</p>
+      </div>
+      <button class="btn-primary-action">
+        <i class="bi bi-plus-lg"></i> <span>Importer un livre</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon-wrapper">
+        <i class="bi bi-journal-bookmark-fill"></i>
+      </div>
+      <div class="stat-data">
+        <span class="stat-value">24</span>
+        <span class="stat-label">Livres sauvegardés</span>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon-wrapper progress-icon">
+        <i class="bi bi-hourglass-split"></i>
+      </div>
+      <div class="stat-data">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Lectures en cours</span>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon-wrapper storage-icon">
+        <i class="bi bi-cloud-check-fill"></i>
+      </div>
+      <div class="stat-data">
+        <span class="stat-value">42%</span>
+        <span class="stat-label">Stockage utilisé</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="filter-bar">
+    <div class="search-input-wrapper">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" class="search-input" placeholder="Rechercher dans mes livres...">
+    </div>
+    
+    <div class="filter-group">
+      <button class="filter-pill active">Tout voir</button>
+      <button class="filter-pill">PDF / EPUB</button>
+      <button class="filter-pill">Notes</button>
+    </div>
+  </div>
+
+  <main class="books-grid">
+    
+    <article class="book-card">
+      <div class="book-cover">
+        <div class="placeholder-cover pdf-cover">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+        </div>
+        <div class="badge-format">PDF</div>
+      </div>
+      <div class="book-info">
+        <h3 class="book-title">Conception orientée objet et design patterns</h3>
+        <p class="book-author">Auteur Inconnu • Ajouté hier</p>
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" style="width: 75%;"></div>
+          </div>
+          <span class="progress-percentage">75% lu</span>
+        </div>
+        <div class="book-actions">
+          <button class="btn-icon-only" title="Reprendre la lecture">
+            <i class="bi bi-play-fill"></i>
+          </button>
+          <button class="btn-icon-only danger" title="Supprimer">
+            <i class="bi bi-trash3"></i>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="book-card">
+      <div class="book-cover">
+        <div class="placeholder-cover note-cover">
+          <i class="bi bi-journal-text"></i>
+        </div>
+        <div class="badge-format">Note</div>
+      </div>
+      <div class="book-info">
+        <h3 class="book-title">Fiche de lecture : Clean Code de Robert C. Martin</h3>
+        <p class="book-author">Freddy R. • Ajouté il y a 3 jours</p>
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" style="width: 100%;"></div>
+          </div>
+          <span class="progress-percentage completed">Terminé <i class="bi bi-check2-all"></i></span>
+        </div>
+        <div class="book-actions">
+          <button class="btn-icon-only" title="Modifier la note">
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+          <button class="btn-icon-only danger" title="Supprimer">
+            <i class="bi bi-trash3"></i>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="book-card">
+      <div class="book-cover">
+        <div class="placeholder-cover epub-cover">
+          <i class="bi bi-book-half"></i>
+        </div>
+        <div class="badge-format">EPUB</div>
+      </div>
+      <div class="book-info">
+        <h3 class="book-title">The Pragmatic Programmer</h3>
+        <p class="book-author">Andrew Hunt • Ajouté il y a 1 semaine</p>
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" style="width: 15%;"></div>
+          </div>
+          <span class="progress-percentage">15% lu</span>
+        </div>
+        <div class="book-actions">
+          <button class="btn-icon-only" title="Reprendre la lecture">
+            <i class="bi bi-play-fill"></i>
+          </button>
+          <button class="btn-icon-only danger" title="Supprimer">
+            <i class="bi bi-trash3"></i>
+          </button>
+        </div>
+      </div>
+    </article>
+
+  </main>
+</div>

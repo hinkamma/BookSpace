@@ -1,6 +1,34 @@
 <!-- Le conteneur global prend un fond légèrement teinté pour faire ressortir les cartes -->
 <div class="books-grid-section">
   <div class="container py-4">
+    <section class="books-hero-panel">
+      <div class="hero-copy">
+        <span class="hero-badge">Votre bibliothèque en plein essor</span>
+        <h2>Redécouvrez vos livres préférés dans un espace plus vivant.</h2>
+        <p>Explorez les recommandations du moment, suivez vos lectures et profitez d’un accueil plus inspirant à chaque visite.</p>
+
+        <div class="hero-actions">
+          <button routerLink="/discover" type="button" class="hero-btn primary">Explorer</button>
+          <button type="button" class="hero-btn secondary">Nouveautés</button>
+        </div>
+      </div>
+
+      <div class="hero-highlight-card">
+        <div class="hero-stat">
+          <strong>{{ featuredBooks.length }}</strong>
+          <span>livres à découvrir</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4.9/5</strong>
+          <span>avis de lecteurs</span>
+        </div>
+        <div class="hero-stat">
+          <strong>24h</strong>
+          <span>mise à jour</span>
+        </div>
+      </div>
+    </section>
+
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
       <ng-container *ngFor="let featured of featuredBooks">
         <div class="col">

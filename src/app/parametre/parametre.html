@@ -1,0 +1,157 @@
+<div class="settings-wrapper">
+  <div class="back-navigation">
+    <button type="button" routerLink="/" class="ultimate-back-capsule">
+      <div class="capsule-icon-zone">
+        <span class="premium-chevron-left"></span>
+      </div>
+      <div class="capsule-divider"></div>
+      <span class="capsule-text-zone">Retour</span>
+    </button>
+  </div>
+
+  <header class="settings-header">
+    <h1 class="settings-title">Paramètres</h1>
+    <p class="settings-subtitle">Personnalisez votre expérience de lecture et gérez vos données de profil.</p>
+  </header>
+
+  <div class="settings-layout">
+    <aside class="settings-sidebar">
+      <button type="button" class="nav-pill" [class.active]="activeSection === 'profile'" (click)="selectSection('profile')">
+        <i class="bi bi-person-fill pill-icon"></i> Mon Profil
+      </button>
+      <button type="button" class="nav-pill" [class.active]="activeSection === 'preferences'" (click)="selectSection('preferences')">
+        <i class="bi bi-book pill-icon"></i> Préférences
+      </button>
+      <button type="button" class="nav-pill" [class.active]="activeSection === 'notifications'" (click)="selectSection('notifications')">
+        <i class="bi bi-bell pill-icon"></i> Notifications
+      </button>
+      <button type="button" class="nav-pill" [class.active]="activeSection === 'security'" (click)="selectSection('security')">
+        <i class="bi bi-shield-lock pill-icon"></i> Sécurité
+      </button>
+    </aside>
+
+    <main class="settings-content" [ngSwitch]="activeSection">
+      <section *ngSwitchCase="'profile'" class="settings-card">
+        <h2 class="card-title">Informations personnelles</h2>
+
+        <div class="profile-avatar-section">
+          <div class="avatar-circle">
+            <i class="bi bi-person"></i>
+          </div>
+          <div class="avatar-details">
+            <h3 class="avatar-name">Freddy R.</h3>
+            <span class="badge-role">
+              <i class="bi bi-patch-check-fill"></i> Membre Premium
+            </span>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Nom d'affichage</label>
+            <input type="text" class="form-input" value="Freddy R." placeholder="Ex: Martin F.">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Adresse e-mail</label>
+            <input type="email" class="form-input" value="freddy.r@bookyspace.com" placeholder="nom@exemple.com">
+          </div>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'preferences'" class="settings-card">
+        <h2 class="card-title">Préférences de lecture</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Objectif annuel de lecture</label>
+            <div class="input-number-wrapper">
+              <input type="number" class="form-input" value="12" min="1">
+              <span class="input-suffix">livres / an</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Affichage par défaut</label>
+            <div class="toggle-group">
+              <button class="toggle-btn active" type="button">
+                <i class="bi bi-grid-3x3-gap-fill"></i> Grille
+              </button>
+              <button class="toggle-btn" type="button">
+                <i class="bi bi-list-ul"></i> Liste
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-text">
+            <span class="toggle-label">Mode Sombre automatique</span>
+            <span class="toggle-description">Adapter l'affichage selon les préférences de votre système.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </section>
+
+      <section *ngSwitchCase="'notifications'" class="settings-card">
+        <h2 class="card-title">Notifications</h2>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-text">
+            <span class="toggle-label">Alertes par e-mail</span>
+            <span class="toggle-description">Recevez des mises à jour sur vos lectures et nouveautés.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-text">
+            <span class="toggle-label">Rappels hebdomadaires</span>
+            <span class="toggle-description">Recevez un rappel pour poursuivre votre objectif de lecture.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </section>
+
+      <section *ngSwitchDefault class="settings-card">
+        <h2 class="card-title">Sécurité</h2>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-text">
+            <span class="toggle-label">Authentification à deux facteurs</span>
+            <span class="toggle-description">Renforcez la sécurité de votre compte avec une vérification supplémentaire.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="setting-toggle-row">
+          <div class="toggle-text">
+            <span class="toggle-label">Connexion depuis de nouveaux appareils</span>
+            <span class="toggle-description">Recevez une alerte si votre compte est utilisé sur un appareil inconnu.</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </section>
+
+      <div class="settings-actions">
+        <button type="button" class="btn-secondary">Annuler</button>
+        <button type="button" class="btn-primary">Enregistrer les modifications</button>
+      </div>
+    </main>
+  </div>
+</div>

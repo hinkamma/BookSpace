@@ -6,6 +6,8 @@ import { Discover } from './discover/discover';
 import { HelpSupport } from './help-support/help-support';
 import { Statistique } from './statistique/statistique';
 import { Bibiotheque } from './bibiotheque/bibiotheque';
+import { Parametre } from './parametre/parametre';
+import { CollectePrivee } from './collecte-privee/collecte-privee';
 
 export const routes: Routes = [
   { path: '', component: Books },
@@ -14,6 +16,9 @@ export const routes: Routes = [
   { path: 'discover', component: Discover },
   { path: 'help', component: HelpSupport },
   {path: 'stat', component: Statistique},
-  {path: 'Bibiotheque', component: Bibiotheque},
+  {path: 'bibiotheque', component: Bibiotheque},
+  {path: 'parametre', component: Parametre},
+  {path: 'collecte_privee', component: CollectePrivee},
+
   { path: '**', redirectTo: '' }
 ];

@@ -1,13 +1,134 @@
-/* Section globale texturée pour briser le blanc monotone */
+/* Section globale plus douce et moins blanche */
 .books-grid-section {
-  background-color: #f8fafc; /* Couleur de fond ardoise douce et épurée */
+  background: linear-gradient(135deg, #f5f3ff 0%, #fff7ed 100%);
   min-height: 400px;
+  padding: 1.25rem;
+  border-radius: 28px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* Base de la Carte Premium */
-.premium-book-card {
-  background-color: #ffffff;
+/* Hero panel responsive */
+.books-hero-panel {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 1.25rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.13) 0%, rgba(249, 115, 22, 0.12) 100%);
+  border: 1px solid rgba(129, 140, 248, 0.18);
   border-radius: 24px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+}
+
+.hero-copy h2 {
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0.4rem 0 0.7rem;
+  line-height: 1.2;
+}
+
+.hero-copy p {
+  font-size: 0.98rem;
+  color: #475569;
+  margin: 0 0 1rem;
+  max-width: 640px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  color: #4f46e5;
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.hero-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-1px);
+}
+
+.hero-btn.primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+.hero-btn.secondary {
+  background: rgba(255, 255, 255, 0.85);
+  color: #334155;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.hero-highlight-card {
+  display: grid;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.hero-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f5f3ff 100%);
+}
+
+.hero-stat strong {
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.hero-stat span {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .books-hero-panel {
+    grid-template-columns: 1fr;
+    padding: 1.2rem;
+  }
+
+  .hero-copy h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-copy p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Base de la carte premium */
+.premium-book-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fdfcff 100%);
+  border-radius: 22px;
   padding: 1.75rem;
   height: 100%;
   display: flex;
@@ -15,24 +136,24 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 2px 4px -1px rgba(15, 23, 42, 0.01);
+  border: 1px solid rgba(129, 140, 248, 0.16);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Effet d'élévation pro au survol */
+/* Effet plus élégant au survol */
 .premium-book-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.02);
-  border-color: #cbd5e1;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  border-color: rgba(129, 140, 248, 0.3);
 }
 
-/* --- LE STYLE REMARQUABLE (Carte mise en avant) --- */
+/* Carte mise en avant avec teinte plus douce */
 .premium-book-card.featured-card {
-  border-color: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.25);
+  background: linear-gradient(135deg, #faf7ff 0%, #fff8f2 100%);
 }
 
-/* Ligne lumineuse en dégradé sur le dessus de la carte remarquable */
 .premium-book-card.featured-card::before {
   content: '';
   position: absolute;
@@ -40,14 +161,12 @@
   left: 0;
   right: 0;
   height: 5px;
-  /* Superbe dégradé moderne indigo vers corail chaud */
-  background: linear-gradient(90deg, #6366f1 0%, #f43f5e 100%);
+  background: linear-gradient(90deg, #6366f1 0%, #f59e0b 65%, #f43f5e 100%);
 }
 
 .premium-book-card.featured-card:hover {
-  border-color: #6366f1;
+  border-color: #818cf8;
 }
-/* -------------------------------------------------- */
 
 /* Top Row Layout */
 .card-top-row {
@@ -57,27 +176,27 @@
   margin-bottom: 2rem;
 }
 
-/* Pille de Catégorie */
+/* Pille de catégorie plus visible */
 .category-pill {
   font-size: 0.725rem;
   font-weight: 700;
-  color: #475569;
+  color: #5b5f8a;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  background-color: #f1f5f9;
-  padding: 0.35rem 0.75rem;
-  border-radius: 8px;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, #ede9fe 0%, #fef3c7 100%);
+  padding: 0.38rem 0.8rem;
+  border-radius: 999px;
 }
 
-/* Badges de Statut */
+/* Badges de statut */
 .status-indicator {
   font-size: 0.75rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 20px;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
 }
 
 .status-indicator .dot {
@@ -86,17 +205,16 @@
   border-radius: 50%;
 }
 
-/* Couleurs des pastilles */
-.status-indicator.read { color: #16a34a; background-color: #dcfce7; }
-.status-indicator.read .dot { background-color: #16a34a; }
+.status-indicator.read { color: #15803d; background-color: #dcfce7; }
+.status-indicator.read .dot { background-color: #15803d; }
 
 .status-indicator.reading { color: #2563eb; background-color: #dbeafe; }
 .status-indicator.reading .dot { background-color: #2563eb; }
 
-.status-indicator.to-read { color: #ea580c; background-color: #ffedd5; }
-.status-indicator.to-read .dot { background-color: #ea580c; }
+.status-indicator.to-read { color: #c2410c; background-color: #ffedd5; }
+.status-indicator.to-read .dot { background-color: #c2410c; }
 
-/* Contenu Typographique */
+/* Contenu typographique */
 .card-main-content {
   flex-grow: 1;
   margin-bottom: 2rem;
@@ -105,7 +223,7 @@
 .book-display-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #1e293b;
   letter-spacing: -0.02em;
   margin: 0 0 0.35rem 0;
   line-height: 1.3;
@@ -117,19 +235,19 @@
   margin: 0;
 }
 
-/* Footer d'actions épuré */
+/* Footer d’actions plus propre */
 .card-actions-footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px dashed #e2e8f0;
+  padding-top: 1.1rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.35);
 }
 
-/* Boutons d'action */
+/* Boutons d’action */
 .action-trigger-btn {
-  background-color: #f8fafc;
-  border: 1px solid transparent;
+  background: linear-gradient(135deg, #f8fafc 0%, #f5f3ff 100%);
+  border: 1px solid rgba(129, 140, 248, 0.16);
   color: #475569;
   padding: 0.5rem 0.85rem;
   border-radius: 10px;
@@ -143,8 +261,9 @@
 }
 
 .action-trigger-btn:hover {
-  background-color: #0f172a;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   color: #ffffff;
+  border-color: transparent;
 }
 
 /* Bouton suppression aligné à droite */
@@ -154,6 +273,6 @@
 }
 
 .action-trigger-btn.delete-trigger:hover {
-  background-color: #fef2f2;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffe4e6 100%);
   color: #ef4444;
 }

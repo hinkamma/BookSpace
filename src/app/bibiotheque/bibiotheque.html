@@ -63,16 +63,16 @@
         <input type="text" class="search-lib-input" placeholder="Rechercher par titre, auteur...">
       </div>
       <div class="filter-pills-group">
-        <button type="button" class="filter-pill active">Tous</button>
-        <button type="button" class="filter-pill">En cours</button>
-        <button type="button" class="filter-pill">Terminés</button>
-        <button type="button" class="filter-pill">À lire</button>
+        <button type="button" class="filter-pill" [class.active]="selectedFilter === 'all'" (click)="selectFilter('all')">Tous</button>
+        <button type="button" class="filter-pill" [class.active]="selectedFilter === 'enCours'" (click)="selectFilter('enCours')">En cours</button>
+        <button type="button" class="filter-pill" [class.active]="selectedFilter === 'done'" (click)="selectFilter('done')">Terminés</button>
+        <button type="button" class="filter-pill" [class.active]="selectedFilter === 'todo'" (click)="selectFilter('todo')">À lire</button>
       </div>
     </div>
 
     <!-- GRILLE DE CARTES DE LIVRES -->
     <div class="books-bento-grid">
-      <div class="book-card" *ngFor="let book of books">
+      <div class="book-card" *ngFor="let book of displayedBooks">
         <div class="book-cover-mock preview-blue">
           <i class="bi bi-book-half cover-icon"></i>
         </div>

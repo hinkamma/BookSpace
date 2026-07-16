@@ -14,7 +14,7 @@ import { SearchBar } from './search-bar/search-bar';
 })
 export class App {
   private readonly router = inject(Router);
-  protected readonly authRoutes = ['/login', '/sign','/help','/stat','/Bibiotheque'];
+  protected readonly authRoutes = ['/login', '/sign','/help','/stat','/bibiotheque','/parametre'];
   protected readonly currentUrl = signal(this.router.url);
 
   protected quantite = signal(1);
