@@ -1,0 +1,64 @@
+<nav class="premium-navbar glass-premium-navbar navbar navbar-expand-lg">
+  <div class="container">
+    
+    <!-- Logo de l'application -->
+    <a class="navbar-brand premium-brand d-flex align-items-center gap-2" routerLink="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="brand-icon">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <span class="brand-text">Booky<span class="accent">Space</span></span>
+    </a>
+
+    <!-- Toggler Mobile -->
+    <button class="navbar-toggler custom-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#premiumNavbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenu de la Navigation -->
+    <div class="collapse navbar-collapse" id="premiumNavbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-links-wrapper">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/'" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" href="#">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/discover'" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: false }" href="">Découvrir</a>
+        </li>
+      </ul>
+
+      <!-- ZONE DE DROITE : CONNECTÉ -->
+      <div class="d-flex align-items-center gap-3 authentication-zone">
+        <button type="button" class="btn-nav-utility" title="Notifications">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </button>
+
+        <div class="dropdown">
+          <button class="btn-profile-dropdown dropdown-toggle border-0 bg-transparent p-0 d-flex align-items-center gap-2" type="button" id="userProfileMenu" data-bs-toggle="dropdown">
+            <div class="user-avatar-circle">FR</div>
+            <div class="user-meta-text d-none d-sm-block">
+              <span class="user-name">Freddy R.</span>
+              <span class="user-role">Membre</span>
+            </div>
+          </button>
+          
+          <ul class="dropdown-menu dropdown-menu-end premium-dropdown-menu">
+            <li>
+              <div class="dropdown-header-info">
+                <p class="user-full-email">freddy.roland@example.com</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider opacity-50"></li>
+            <li><a class="dropdown-item premium-dropdown-item" href="#">Ma Collection privée</a></li>
+            <li><a class="dropdown-item premium-dropdown-item" href="#">Paramètres</a></li>
+            <li><hr class="dropdown-divider opacity-50"></li>
+            <li><a class="dropdown-item premium-dropdown-item text-danger" routerLink="/login">Se connecter</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>

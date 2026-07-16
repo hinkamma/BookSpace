@@ -1,0 +1,83 @@
+<div class="auth-wrapper">
+  <div class="auth-container">
+    
+    <!-- PANNEAU GAUCHE : Identité visuelle SaaS -->
+    <div class="auth-side-panel">
+      <div class="panel-branding">
+        <div class="brand-logo-symbol">✨</div>
+        <span class="brand-name-text">BookySpace</span>
+      </div>
+      
+      <div class="panel-marketing-content">
+        <h2 class="panel-catchphrase">Votre bibliothèque personnelle, intelligemment organisée.</h2>
+        <p class="panel-subtext">Rejoignez des milliers de lecteurs et centralisez vos lectures, vos notes et vos découvertes en un seul endroit épuré.</p>
+      </div>
+      
+      <!-- L'accent lumineux discret en arrière-plan -->
+      <div class="panel-glow-accent"></div>
+    </div>
+
+    <!-- PANNEAU DROIT : Le Formulaire de Connexion -->
+    <div class="auth-form-panel">
+      <div class="form-header">
+        <h1 class="auth-main-title">Bon retour parmi nous</h1>
+        <p class="auth-subtitle">Entrez vos accès pour accéder à votre espace</p>
+      </div>
+
+      <form class="auth-interactive-form">
+        
+        <!-- Champ Email -->
+        <div class="input-field-group">
+          <label for="login-email" class="custom-field-label">Adresse e-mail</label>
+          <div class="input-icon-wrapper">
+            <svg class="input-field-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <input type="email" id="login-email" class="custom-form-input" placeholder="nom@exemple.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Champ Mot de passe -->
+        <div class="input-field-group">
+          <div class="label-row-layout">
+            <label for="login-password" class="custom-field-label">Mot de passe</label>
+            <a href="#" class="form-forgot-link">Mot de passe oublié ?</a>
+          </div>
+          <div class="input-icon-wrapper">
+            <svg class="input-field-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <input type="password" id="login-password" class="custom-form-input" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+        </div>
+
+        <!-- Options annexes -->
+        <div class="form-options-row">
+          <label class="custom-checkbox-container">
+            <input type="checkbox" id="remember-session">
+            <span class="checkbox-checkmark"></span>
+            <span class="checkbox-label-text">Se souvenir de moi</span>
+          </label>
+        </div>
+
+        <!-- Action de validation -->
+        <button type="submit" class="btn-auth-submit">
+          <span>Se connecter</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+      </form>
+
+      <!-- Pied de page du formulaire -->
+      <div class="auth-form-footer">
+        <p class="footer-redirect-text">Nouveau sur BookySpace ? <a href="#" class="footer-redirect-link" routerLink="/sign">Créer un compte gratuitement</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>

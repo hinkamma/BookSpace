@@ -1,0 +1,156 @@
+<div class="premium-stats-hub">
+  
+  <!-- BARRE SUPÉRIEURE : Retour -->
+  <div class="stats-top-bar">
+    <button type="button" routerLink="/" class="ultimate-back-capsule">
+      <div class="capsule-icon-zone">
+        <span class="premium-chevron-left"></span>
+      </div>
+      <div class="capsule-divider"></div>
+      <span class="capsule-text-zone">Retour au tableau de bord</span>
+    </button>
+  </div>
+
+  <div class="stats-container">
+    
+    <!-- EN-TÊTE DYNAMIQUE -->
+    <header class="stats-header">
+      <div>
+        <h1 class="stats-title">Analytiques & Rapports</h1>
+        <p class="stats-lead">Suivez l'évolution de vos objectifs, votre rythme de lecture et vos thématiques préférées.</p>
+      </div>
+      <div class="time-filter-dropdown">
+        <select class="premium-select">
+          <option>Ce mois-ci</option>
+          <option selected>Cette année (2026)</option>
+          <option>Global</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- GRILLE PRINCIPALE EN BENTO DESIGN -->
+    <div class="stats-bento-grid">
+      
+      <!-- Carte 1 : Objectif Annuel (Grande jauge de progression) -->
+      <div class="bento-card bento-hero">
+        <div class="bento-card-header">
+          <span class="bento-card-title">Objectif de lecture 2026</span>
+          <i class="bi bi-trophy-fill accent-icon-gold"></i>
+        </div>
+        <div class="goal-progress-wrapper">
+          <div class="circular-progress-mock">
+            <div class="circular-inner">
+              <span class="big-percentage">75%</span>
+              <span class="sub-progress">18 / 24 livres</span>
+            </div>
+          </div>
+          <div class="goal-insights">
+            <p class="insight-text">Plus que <strong>6 livres</strong> pour atteindre votre objectif annuel !</p>
+            <span class="trend-badge positive"><i class="bi bi-graph-up-arrow"></i> En avance de 2 semaines</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 2 : Temps de lecture quotidien -->
+      <div class="bento-card">
+        <div class="bento-card-header">
+          <span class="bento-card-title">Moyenne quotidienne</span>
+          <i class="bi bi-clock-history text-indigo"></i>
+        </div>
+        <div class="stat-value-large">42 <span class="stat-unit">min</span></div>
+        <p class="stat-desc">Temps moyen passé à lire chaque jour.</p>
+        <div class="mini-bar-chart">
+          <div class="bar-item" style="height: 40%;" title="Lun"></div>
+          <div class="bar-item" style="height: 65%;" title="Mar"></div>
+          <div class="bar-item" style="height: 30%;" title="Mer"></div>
+          <div class="bar-item" style="height: 85%;" title="Jeu"></div>
+          <div class="bar-item active" style="height: 95%;" title="Ven"></div>
+          <div class="bar-item" style="height: 50%;" title="Sam"></div>
+          <div class="bar-item" style="height: 60%;" title="Dim"></div>
+        </div>
+      </div>
+
+      <!-- Carte 3 : Streak / Série en cours -->
+      <div class="bento-card">
+        <div class="bento-card-header">
+          <span class="bento-card-title">Série de lecture</span>
+          <i class="bi bi-lightning-charge-fill text-orange"></i>
+        </div>
+        <div class="stat-value-large">12 <span class="stat-unit">jours</span></div>
+        <p class="stat-desc">Jours consécutifs de lecture cette saison.</p>
+        <div class="streak-calendar-preview">
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot filled"></span>
+          <span class="dot current"></span>
+          <span class="dot empty"></span>
+          <span class="dot empty"></span>
+        </div>
+      </div>
+
+      <!-- Carte 4 : Distribution par Catégories (Large) -->
+      <div class="bento-card bento-wide">
+        <div class="bento-card-header">
+          <span class="bento-card-title">Genres & Thématiques les plus lus</span>
+          <i class="bi bi-pie-chart-fill text-purple"></i>
+        </div>
+        <div class="categories-analytics-box">
+          <!-- Simulation d'un graphique en barres horizontales empilées ou listées -->
+          <div class="category-row">
+            <div class="category-meta">
+              <span class="cat-name">Développement Personnel</span>
+              <span class="cat-count">8 livres</span>
+            </div>
+            <div class="cat-progress-track">
+              <div class="cat-progress-bar bg-indigo" style="width: 44%;"></div>
+            </div>
+          </div>
+
+          <div class="category-row">
+            <div class="category-meta">
+              <span class="cat-name">Génie Logiciel & Architecture</span>
+              <span class="cat-count">6 livres</span>
+            </div>
+            <div class="cat-progress-track">
+              <div class="cat-progress-bar bg-purple" style="width: 33%;"></div>
+            </div>
+          </div>
+
+          <div class="category-row">
+            <div class="category-meta">
+              <span class="cat-name">Biographies & Histoire</span>
+              <span class="cat-count">4 livres</span>
+            </div>
+            <div class="cat-progress-track">
+              <div class="cat-progress-bar bg-orange" style="width: 22%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 5 : Pages Lu vs Livres -->
+      <div class="bento-card">
+        <div class="bento-card-header">
+          <span class="bento-card-title">Volume total</span>
+          <i class="bi bi-journal-text text-teal"></i>
+        </div>
+        <div class="compact-data-stack">
+          <div class="stack-item">
+            <span class="stack-num">5 420</span>
+            <span class="stack-lbl">Pages lues</span>
+          </div>
+          <div class="stack-divider"></div>
+          <div class="stack-item">
+            <span class="stack-num">240</span>
+            <span class="stack-lbl">Chapitres</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

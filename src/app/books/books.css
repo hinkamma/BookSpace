@@ -1,0 +1,159 @@
+/* Section globale texturée pour briser le blanc monotone */
+.books-grid-section {
+  background-color: #f8fafc; /* Couleur de fond ardoise douce et épurée */
+  min-height: 400px;
+}
+
+/* Base de la Carte Premium */
+.premium-book-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 2px 4px -1px rgba(15, 23, 42, 0.01);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Effet d'élévation pro au survol */
+.premium-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.02);
+  border-color: #cbd5e1;
+}
+
+/* --- LE STYLE REMARQUABLE (Carte mise en avant) --- */
+.premium-book-card.featured-card {
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Ligne lumineuse en dégradé sur le dessus de la carte remarquable */
+.premium-book-card.featured-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  /* Superbe dégradé moderne indigo vers corail chaud */
+  background: linear-gradient(90deg, #6366f1 0%, #f43f5e 100%);
+}
+
+.premium-book-card.featured-card:hover {
+  border-color: #6366f1;
+}
+/* -------------------------------------------------- */
+
+/* Top Row Layout */
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Pille de Catégorie */
+.category-pill {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #f1f5f9;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+}
+
+/* Badges de Statut */
+.status-indicator {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+.status-indicator .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Couleurs des pastilles */
+.status-indicator.read { color: #16a34a; background-color: #dcfce7; }
+.status-indicator.read .dot { background-color: #16a34a; }
+
+.status-indicator.reading { color: #2563eb; background-color: #dbeafe; }
+.status-indicator.reading .dot { background-color: #2563eb; }
+
+.status-indicator.to-read { color: #ea580c; background-color: #ffedd5; }
+.status-indicator.to-read .dot { background-color: #ea580c; }
+
+/* Contenu Typographique */
+.card-main-content {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.book-display-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.3;
+}
+
+.book-display-author {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Footer d'actions épuré */
+.card-actions-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+/* Boutons d'action */
+.action-trigger-btn {
+  background-color: #f8fafc;
+  border: 1px solid transparent;
+  color: #475569;
+  padding: 0.5rem 0.85rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-trigger-btn:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Bouton suppression aligné à droite */
+.action-trigger-btn.delete-trigger {
+  padding: 0.5rem;
+  margin-left: auto;
+}
+
+.action-trigger-btn.delete-trigger:hover {
+  background-color: #fef2f2;
+  color: #ef4444;
+}

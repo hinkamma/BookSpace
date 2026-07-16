@@ -1,0 +1,73 @@
+<div class="discover-section">
+  <div class="container py-5">
+    
+    <!-- 1. BANNIÈRE VEDETTE (RECOMMANDATION IA DISCRÈTE) -->
+    <div class="discover-hero-card mb-5">
+      <div class="hero-card-content">
+        <span class="hero-badge">Recommandé pour vous</span>
+        <h2 class="hero-book-title">Refactoring</h2>
+        <p class="hero-book-subtitle">Améliorer la structure du code existant</p>
+        <p class="hero-book-description">Le guide incontournable de Martin Fowler pour écrire un code plus propre, plus lisible et plus facile à maintenir.</p>
+        
+        <div class="hero-actions pt-3">
+          <button type="button" class="btn-hero-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            Ajouter à ma liste
+          </button>
+        </div>
+      </div>
+      <!-- Un élément géométrique abstrait en fond remplace les lourdes images -->
+      <div class="hero-visual-accent"></div>
+    </div>
+
+    <!-- 2. BARRE DE FILTRES HORIZONTAUX (CHOIX DU GENRE) -->
+    <div class="filter-bar-wrapper mb-4">
+      <h3 class="section-sub-title mb-3">Explorer par thématique</h3>
+      <div class="horizontal-scroll-filters">
+        @for (filter of filters; track filter.value) {
+          <button
+            type="button"
+            class="filter-pill"
+            [class.active]="selectedCategory === filter.value"
+            (click)="selectCategory(filter.value)"
+          >
+            {{ filter.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- 3. GRILLE DES TENDANCES DE LA COMMUNAUTÉ -->
+    <div class="trends-wrapper">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="section-sub-title m-0">{{ sectionTitle }}</h3>
+        <span class="trends-counter-meta">{{lengthBooks()}}</span>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @for (book of currentBooks; track book.title) {
+          <div class="col">
+            <div class="discover-trend-card">
+              <div class="trend-card-body">
+                <div class="trend-meta-top">
+                  <span class="trend-popularity">{{ book.popularity }}</span>
+                  <span class="trend-reading-time">{{ book.readingTime }}</span>
+                </div>
+                <h4 class="trend-title">{{ book.title }}</h4>
+                <p class="trend-author">{{ book.author }}</p>
+              </div>
+              <div class="trend-card-footer">
+                <button type="button" class="btn-trend-add" title="Ajouter à ma bibliothèque">
+                  <span>Ajouter</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</div>

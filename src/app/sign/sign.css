@@ -1,0 +1,411 @@
+/* Réutilisation du wrapper et du container bi-panneaux */
+.auth-wrapper {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1040px;
+  min-height: 660px;
+  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Ajustement pour donner un peu plus de place à la bannière */
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.04);
+}
+
+@media (max-width: 992px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+  .auth-marketing-panel {
+    display: none;
+  }
+}
+
+/* --- LE PANNEAU PUBLICITAIRE BANNIÈRE (GAUCHE) --- */
+.auth-marketing-panel {
+  /* Arrière plan texturé en dégradé profond simulant une image publicitaire moderne */
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #31102f 100%);
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.panel-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Effet d'éclairage radial pour donner du relief et de la valeur au produit */
+  background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.premium-badge-marketing {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 30px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.02em;
+}
+
+.marketing-headline {
+  color: #ffffff;
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.marketing-pitch {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* Liste des arguments marketing */
+.marketing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.marketing-features-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.feature-icon-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.marketing-features-list strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.marketing-features-list p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Zone data de preuve sociale en bas */
+.marketing-footer-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.stat-border-line {
+  width: 1px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- FORMULAIRE ET CONFIGURATION DROITE --- */
+.auth-form-panel {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-main-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.auth-subtitle {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.auth-interactive-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-top: 2rem;
+}
+
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.custom-field-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field-icon {
+  position: absolute;
+  left: 1rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.custom-form-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.custom-form-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.08);
+}
+
+/* Gestion de la case à cocher uniforme */
+.custom-checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  gap: 0.5rem;
+}
+
+.custom-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+
+.checkbox-checkmark {
+  height: 18px;
+  width: 18px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.custom-checkbox-container input:checked ~ .checkbox-checkmark {
+  background-color: #0f172a;
+  border-color: #0f172a;
+}
+
+.checkbox-label-text {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.inline-policy-link, .footer-redirect-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Bouton Soumettre */
+.btn-auth-submit {
+  width: 100%;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-auth-submit:hover {
+  background-color: #1e293b;
+}
+
+.auth-form-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-redirect-text {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+
+/* --- LE BOUTON RETOUR SAAS ULTIMATE (Sans déplacement) --- */
+.auth-back-to-app-btn {
+  /* Affichage et alignement fluide */
+  display: inline-flex;
+  align-items: center;
+  
+  /* Espacement et rondeur moderne */
+  padding: 0.55rem 1.25rem;
+  border-radius: 12px;
+  
+  /* Arrière-plan hybride (Finitions mates) */
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  
+  /* Typographie épurée */
+  color: #475569;
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  
+  /* Reset natif & Ombre douce */
+  cursor: pointer;
+  outline: none;
+  box-shadow: 
+    0 1px 2px 0 rgba(15, 23, 42, 0.05),
+    0 4px 12px 0 rgba(15, 23, 42, 0.03);
+  
+  /* Transition organique élastique */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- L'ICÔNE CHEVRON MODERNISÉE --- */
+.css-back-chevron {
+  width: 7px;
+  height: 7px;
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-right: 0.75rem;
+  position: relative;
+  
+  /* Ligne de séparation verticale subtile après la flèche */
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.css-back-chevron::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -4px;
+  height: 14px;
+  width: 1px;
+  background-color: #e2e8f0;
+  transform: rotate(-45deg); /* Compense la rotation du parent */
+  transition: background-color 0.3s;
+}
+
+/* --- MICRO-INTERACTIONS AU SURVOL (HOVER) --- */
+
+.auth-back-to-app-btn:hover {
+  background: #0f172a; /* Bascule sur un noir/bleuté profond très chic */
+  border-color: #0f172a;
+  color: #ffffff;
+  
+  /* Élévation lumineuse */
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 20px -5px rgba(15, 23, 42, 0.12),
+    0 4px 6px -2px rgba(15, 23, 42, 0.04);
+}
+
+/* Animation fluide de la flèche qui recule au survol */
+.auth-back-to-app-btn:hover .css-back-chevron {
+  transform: rotate(45deg) translate(-3px, 3px);
+}
+
+/* Le séparateur interne change de couleur au survol pour rester discret */
+.auth-back-to-app-btn:hover .css-back-chevron::after {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Effet d'enfoncement physique au clic */
+.auth-back-to-app-btn:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .auth-back-to-app-btn {
+    padding: 0.65rem;
+    border-radius: 10px;
+  }
+  
+  .css-back-chevron {
+    margin-right: 0;
+  }
+  
+  .css-back-chevron::after {
+    display: none; /* On cache le séparateur sur mobile */
+  }
+  
+  .back-btn-text {
+    display: none; /* On ne garde que la flèche épurée sur mobile */
+  }
+}

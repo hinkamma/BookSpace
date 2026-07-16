@@ -1,0 +1,309 @@
+/* --- CONFIGURATION ARCHITECTURALE --- */
+.premium-support-hub {
+  background-color: #0b0f19; /* Fond ultra-sombre style dashboard futuriste */
+  min-height: 100vh;
+  padding: 2rem 1.5rem 5rem 1.5rem;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- ZONE DU BOUTON RETOUR CAPSULE (AMÉLIORÉ) --- */
+.action-top-bar {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ultimate-back-capsule {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 1rem 0.35rem 0.5rem;
+  border-radius: 100px; /* Forme capsule parfaite */
+  cursor: pointer;
+  outline: none;
+  color: #94a3b8;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.capsule-icon-zone {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.premium-chevron-left {
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.capsule-divider {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 0.75rem;
+}
+
+.capsule-text-zone {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Interactions de la capsule */
+.ultimate-back-capsule:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.1);
+}
+
+.ultimate-back-capsule:hover .capsule-icon-zone {
+  background-color: #0f172a;
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+.ultimate-back-capsule:hover .capsule-divider {
+  background-color: rgba(15, 23, 26, 0.15);
+}
+
+/* --- EN-TÊTE IMMERSIF --- */
+.hub-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hub-badge {
+  background: linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(244,63,94,0.15) 100%);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #c7d2fe;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.hub-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+}
+
+.hub-lead {
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* --- STYLISATION DE LA GRILLE BENTO --- */
+.bento-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Cartes de base du Bento */
+.bento-card {
+  background-color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Ligne 1 : Moteur de recherche étalé sur toute la largeur (3 colonnes) */
+.bento-search-zone {
+  grid-column: span 3;
+  padding: 1.25rem 2rem;
+  background-color: #161e2f;
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.search-box-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-glow-icon {
+  font-size: 1.25rem;
+  color: #6366f1;
+  text-shadow: 0 0 10px #6366f1;
+}
+
+.bento-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.bento-input::placeholder {
+  color: #4b5563;
+}
+
+/* Cartes FAQ Individuelles */
+.faq-pill {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.faq-card-question {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.faq-card-answer {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grand panneau de support (Prend 3 colonnes de large) */
+.bento-support-panel {
+  grid-column: span 3;
+  background: linear-gradient(135deg, #111625 0%, #080b11 100%);
+  border-color: rgba(244, 63, 94, 0.15);
+  padding: 3.5rem;
+}
+
+.live-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.pulse-radar {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  display: inline-block;
+}
+
+.live-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #10b981;
+  letter-spacing: 0.05em;
+}
+
+.panel-callaction {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 550px;
+  margin-bottom: 0.75rem;
+}
+
+.panel-description {
+  color: #64748b;
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.action-footer-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-pento-primary {
+  background-color: #ffffff;
+  color: #0f172a;
+  padding: 0.75rem 1.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-pento-primary:hover {
+  background-color: #e2e8f0;
+}
+
+.support-meta-mail {
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Effet néon abstrait en tâche de fond sur le bento */
+.bento-glow-effect {
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(244,63,94,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* --- OPTIMISATION RESPONSIVE --- */
+@media (max-width: 992px) {
+  .bento-grid-layout {
+    grid-template-columns: 1fr; /* Passage sur une seule colonne pour tablettes/mobiles */
+  }
+  .bento-search-zone, .bento-support-panel {
+    grid-column: span 1;
+  }
+  .bento-support-panel {
+    padding: 2rem;
+  }
+  .action-footer-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

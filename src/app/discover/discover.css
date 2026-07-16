@@ -1,0 +1,221 @@
+/* Arrière-plan global texturé de la zone d'exploration */
+.discover-section {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* --- 1. SUPERBE BANNIÈRE HERO --- */
+.discover-hero-card {
+  background: #0f172a; /* Fond ardoise foncé pour un contraste maximal */
+  border-radius: 28px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.3);
+}
+
+.hero-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 60%;
+}
+
+.hero-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(90deg, #6366f1 0%, #f43f5e 100%);
+  padding: 0.4rem 0.85rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-book-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.hero-book-subtitle {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero-book-description {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-hero-primary {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-hero-primary:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Forme de fond lumineuse et asymétrique (l'accent remarquable) */
+.hero-visual-accent {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, rgba(244,63,94,0.05) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- 2. BARRE DE FILTRES DÉFILANTE --- */
+.section-sub-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.horizontal-scroll-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.horizontal-scroll-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+}
+
+.filter-pill.active {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  color: #ffffff;
+  border-color: #111827;
+  box-shadow: 0 10px 20px rgba(17, 24, 39, 0.18);
+}
+
+/* --- 3. CARTES DES TENDANCES --- */
+.trends-counter-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.discover-trend-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.discover-trend-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -5px rgba(15, 23, 42, 0.04);
+  border-color: #cbd5e1;
+}
+
+.trend-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.trend-popularity {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6366f1;
+}
+
+.trend-reading-time {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.trend-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  margin: 0 0 0.25rem 0;
+}
+
+.trend-author {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.trend-card-footer {
+  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btn-trend-add {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-trend-add:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}

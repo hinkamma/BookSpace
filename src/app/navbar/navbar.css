@@ -1,0 +1,178 @@
+/* Barre de Navigation Nouvelle Génération */
+.glass-premium-navbar {
+  /* Fond ardoise ultra-léger avec opacité pour laisser passer le flou */
+  background-color: rgba(248, 250, 252, 0.85) !important;
+  /* Effet de flou de verre (Glassmorphism) très recherché en design pro */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.premium-navbar {
+  padding: 0.85rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+}
+
+/* Identité et Logo */
+.premium-brand {
+  color: #0f172a !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.brand-icon {
+  color: #6366f1; /* Accent indigo signature */
+}
+
+.premium-brand .accent {
+  color: #6366f1;
+}
+
+/* Liens de navigation adaptés au fond ardoise */
+.nav-links-wrapper {
+  margin-left: 2rem;
+  gap: 0.5rem;
+}
+
+.nav-links-wrapper .nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569 !important; /* Gris plus soutenu pour le contraste */
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-links-wrapper .nav-link:hover {
+  color: #0f172a !important;
+  background-color: rgba(15, 23, 42, 0.04); /* Légère incrustation au survol */
+}
+
+.nav-links-wrapper .nav-link.active-link {
+  color: #6366f1 !important; /* Devient bleu/indigo pour marquer l'état actif */
+  background-color: rgba(99, 102, 241, 0.06);
+}
+
+/* Boutons Utilitaires */
+.btn-nav-utility {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  padding: 0.4rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-nav-utility:hover {
+  background-color: rgba(15, 23, 42, 0.04);
+  color: #0f172a;
+}
+
+/* Profil & Avatar */
+.btn-profile-dropdown::after {
+  display: none !important;
+}
+
+.user-avatar-circle {
+  width: 36px;
+  height: 36px;
+  background-color: #0f172a; /* Avatar sombre pour trancher proprement */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.user-meta-text {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.user-name {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.user-role {
+  display: block;
+  font-size: 0.725rem;
+  color: #64748b;
+}
+
+/* Dropdown Menu haut de gamme */
+.premium-dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.15) !important;
+  border-radius: 14px !important;
+  padding: 0.5rem !important;
+  min-width: 220px;
+  right: 0 !important;
+  left: auto !important;
+  margin: 0 !important;
+  max-width: calc(100vw - 1rem);
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    position: static !important;
+  }
+
+  .premium-dropdown-menu {
+    position: fixed !important;
+    top: 4.5rem !important;
+    right: 0 !important;
+    left: auto !important;
+    width: auto !important;
+    min-width: 200px;
+    max-width: calc(100vw - 1rem) !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 2000 !important;
+  }
+}
+
+.dropdown-header-info {
+  padding: 0.5rem 0.75rem;
+}
+
+.user-full-email {
+  font-size: 0.775rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.premium-dropdown-item {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: #334155 !important;
+  padding: 0.6rem 0.75rem !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease;
+}
+
+.premium-dropdown-item:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.premium-dropdown-item.text-danger:hover {
+  background-color: #fef2f2 !important;
+  color: #ef4444 !important;
+}
+
+.custom-toggler:focus {
+  box-shadow: none !important;
+}

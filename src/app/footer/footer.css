@@ -1,0 +1,120 @@
+/* Structure globale du Footer */
+.premium-footer {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(241, 245, 249, 0.8);
+  padding: 2.5rem 0;
+  margin-top: auto; /* Idéal pour le pousser en bas avec un conteneur Flexbox */
+}
+
+/* Alignement des 3 blocs sur une seule ligne aérée */
+.footer-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Version Écran Large : Alignement horizontal parfait */
+@media (min-width: 768px) {
+  .footer-inner-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+/* Bloc Marque / Logo */
+.footer-brand-side {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-brand-side {
+    text-align: left;
+  }
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0f172a;
+}
+
+.logo-icon {
+  color: #6366f1; /* Accent Indigo discret */
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logo-text .accent {
+  color: #6366f1;
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Bloc Navigation Centrale */
+.footer-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.foot-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.foot-link:hover {
+  color: #0f172a;
+}
+
+/* Bloc Méta / Réseaux & Droits */
+.footer-meta-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-meta-side {
+    align-items: flex-end;
+  }
+}
+
+.github-social-btn {
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.github-social-btn:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.copyright-text {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}

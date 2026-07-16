@@ -1,0 +1,89 @@
+<div class="premium-library-hub">
+  
+  <!-- BARRE SUPÉRIEURE : Action de Retour & Titre -->
+  <div class="library-top-bar">
+    <button type="button" routerLink="/" class="ultimate-back-capsule">
+      <div class="capsule-icon-zone">
+        <span class="premium-chevron-left"></span>
+      </div>
+      <div class="capsule-divider"></div>
+      <span class="capsule-text-zone">Retour au tableau de bord</span>
+    </button>
+  </div>
+
+  <div class="library-container">
+    
+    <!-- EN-TÊTE DE LA BIBLIOTHÈQUE -->
+    <header class="library-header">
+      <div>
+        <h1 class="library-title">Ma Bibliothèque</h1>
+        <p class="library-lead">Centralisez, organisez et suivez l'avancement de vos lectures privées.</p>
+      </div>
+      <!-- Bouton d'action principal avec icône Bootstrap -->
+      <button type="button" class="btn-add-book">
+        <i class="bi bi-plus-lg btn-icon"></i> Ajouter un livre
+      </button>
+    </header>
+
+    <!-- ZONE DE STATISTIQUES RAPIDES (Icônes Bootstrap Icons modernes) -->
+    <div class="library-stats-grid">
+      <div class="stat-box">
+        <div class="stat-icon-wrapper">
+          <i class="bi bi-journal-bookmark"></i>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number">24</span>
+          <span class="stat-label">Livres totaux</span>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon-wrapper">
+          <i class="bi bi-book-half"></i>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number">3</span>
+          <span class="stat-label">En cours de lecture</span>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon-wrapper">
+          <i class="bi bi-bookmark-check-fill"></i>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number">18</span>
+          <span class="stat-label">Lectures terminées</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRE DE FILTRES ET DE RECHERCHE INTERNE -->
+    <div class="library-filter-bar">
+      <div class="search-library-box">
+        <i class="bi bi-search search-mini-icon"></i>
+        <input type="text" class="search-lib-input" placeholder="Rechercher par titre, auteur...">
+      </div>
+      <div class="filter-pills-group">
+        <button type="button" class="filter-pill active">Tous</button>
+        <button type="button" class="filter-pill">En cours</button>
+        <button type="button" class="filter-pill">Terminés</button>
+        <button type="button" class="filter-pill">À lire</button>
+      </div>
+    </div>
+
+    <!-- GRILLE DE CARTES DE LIVRES -->
+    <div class="books-bento-grid">
+      <div class="book-card" *ngFor="let book of books">
+        <div class="book-cover-mock preview-blue">
+          <i class="bi bi-book-half cover-icon"></i>
+        </div>
+        <div class="book-details-zone">
+          <div class="book-badge badge-reading">Livre</div>
+          <h3 class="book-title-text">{{ book.title }}</h3>
+          <p class="book-author-text">{{ book.author }}</p>
+          <p class="book-meta-text">{{ book.popularity }} • {{ book.readingTime }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
